@@ -238,11 +238,34 @@ h3 {
     color: black;
     font-size: 1.2rem;
 }
+.div3{
+    display: flex;
+    gap:1em;
+}
+.div4{
+    background-color: #f0f0f0;
+    color: black;
+    padding: 0.5em;
+    font-size: 1.2em;
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 10px;
+    border:2px solid #1688f0;
+}
+.div4:hover{
+    background-color: var(--bg-main);
+    box-shadow:
+        0 3px 6px var(--accent),
+        0 3px 6px var(--accent);
+}
 
 @media (min-width: 700px) {
     .div2 {
         position: relative;
         left: 10%;
+    }
+    .div3{
+        transform: scale(0.8);
     }
     .user-info div {
         width: 45%;
@@ -263,12 +286,18 @@ h3 {
         position: relative;
         left: 10%;
     }
+    .div3{
+        transform: scale(0.8);
+    }
     .user-info div p {
         margin: 10px;
     }
 }
 
 @media (min-width: 1200px) {
+    .div3{
+        transform: scale(1);
+    }
     .div2 {
         position: relative;
         left: 25%;
