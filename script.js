@@ -22,7 +22,16 @@ document.getElementById('usernameForm').addEventListener('submit', async functio
     }
 });
 
+const div4Elements = document.querySelectorAll('.div4');
 
+div4Elements.forEach((div4) => {
+    div4.addEventListener('click', function() {
+        const value = this.textContent;
+        count = parseInt(value); 
+        repoList.innerHTML = '';
+        getRepos();
+    });
+});
 
 
 const getProfile = async () => {
