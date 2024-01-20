@@ -49,7 +49,9 @@ const displayProfile = (profile) => {
             <img alt="user avatar" src=${profile.avatar_url} />
         </figure>
         <div>
-            <h2><a href=${profile.blog}><strong>${profile.name}</strong></a></h2>
+            <h2><a href='https://github.com/${username}'><strong>
+            ${profile.name}
+            </strong></a></h2>
             <p>${profile.bio}</p>
             <p>
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
