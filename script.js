@@ -41,6 +41,7 @@ const getProfile = async () => {
 };
 getProfile();
 
+document.querySelector('#s1').innerHTML= `Code Base : <a href='https://github.com/mrinal-rangers/repo-displayer'> made by mrinal </a>`;
 // display infomation from github profile
 const displayProfile = (profile) => {
     const userInfo = document.querySelector('.user-info');
