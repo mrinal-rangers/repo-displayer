@@ -79,6 +79,7 @@ getRepos();
 const displayRepos = (repos) => {
     const userHome = `https://github.com/${username}`;
     filterInput.classList.remove('hide');
+    let num =1;
     for (const repo of repos) {
         if(count<=0)break;
         if (repo.fork && hideForks) {
@@ -91,7 +92,7 @@ const displayRepos = (repos) => {
         let listItem = document.createElement('li');
         listItem.classList.add('repo');
         listItem.innerHTML = `
-            <h3>${repo.name}</h3>
+            <h3>${num++}. ${repo.name}</h3>
             <span>${repo.description}</span> <br/><br/>`;
         if (repo.stargazers_count > 0) {
             listItem.innerHTML += `<a href="${starsUrl}">
