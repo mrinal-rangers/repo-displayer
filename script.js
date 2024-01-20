@@ -22,16 +22,7 @@ document.getElementById('usernameForm').addEventListener('submit', async functio
     }
 });
 
-const div4Elements = document.querySelectorAll('.div4');
 
-div4Elements.forEach((div4) => {
-    div4.addEventListener('click', function() {
-        const value = this.textContent;
-        count = parseInt(value); 
-        repoList.innerHTML = '';
-        getRepos();
-    });
-});
 
 
 const getProfile = async () => {
@@ -60,6 +51,7 @@ const displayProfile = (profile) => {
           </svg></strong> : ${profile.location}
             </p>
             <p>
+            
                 <strong>${devicons['Github']} : @${profile.login} </strong>
             </p>
         </div>
@@ -126,6 +118,17 @@ const displayRepos = (repos) => {
 
 };
 
+const div4Elements = document.querySelectorAll('.div4');
+
+div4Elements.forEach((div4) => {
+    div4.addEventListener('click', function() {
+        const value = this.textContent;
+        count = parseInt(value); 
+        repoList.innerHTML = '';
+        getRepos();
+    });
+});
+
 filterInput.addEventListener('input', (e) => {
     const search = e.target.value;
     const repos = document.querySelectorAll('.repo');
@@ -140,6 +143,7 @@ filterInput.addEventListener('input', (e) => {
         }
     }
 });
+
 
 
 const devicons = {
@@ -198,5 +202,6 @@ const devicons = {
     'Vim Script': '<i class="devicon-vim-plain colored"></i> Vim Script',
     Vue: '<i class="devicon-vuejs-plain colored"></i> Vue'
 };
+
 
 
