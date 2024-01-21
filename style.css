@@ -272,6 +272,21 @@ h3 {
         0 3px 6px var(--accent),
         0 3px 6px var(--accent);
 }
+.div6{
+    background-color: #f0f0f0;
+    color: black;
+    padding: 0.5em;
+    font-size: 1.2em;
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+    border-right:2px solid var(--accent);
+}
+.div6:hover{
+    background-color: var(--bg-main);
+    box-shadow:
+        0 3px 6px var(--accent),
+        0 3px 6px var(--accent);
+}
 
 @media (min-width: 700px) {
     .div2 {
