@@ -129,6 +129,16 @@ div4Elements.forEach((div4) => {
     });
 });
 
+const div5Elements = document.querySelector('.div5');
+div5Elements.addEventListener('click',()=>{
+    div4Elements.forEach((div4) => {
+        const value = div4.textContent;
+        count = parseInt(value); 
+        div4.innerHTML= `${count+10}`;
+    });
+})
+
+
 filterInput.addEventListener('input', (e) => {
     const search = e.target.value;
     const repos = document.querySelectorAll('.repo');
