@@ -240,7 +240,7 @@ h3 {
 }
 .div3{
     display: flex;
-    gap:1em;
+    border:2px solid var(--accent);
 }
 .div4{
     background-color: #f0f0f0;
@@ -249,8 +249,7 @@ h3 {
     font-size: 1.2em;
     font-weight: bold;
     font-family: 'Open Sans', sans-serif;
-    border-radius: 10px;
-    border:2px solid var(--accent);
+    border-right:2px solid var(--accent);
 }
 .div4:hover{
     background-color: var(--bg-main);
@@ -258,6 +257,7 @@ h3 {
         0 3px 6px var(--accent),
         0 3px 6px var(--accent);
 }
+
 .div5{
     background-color: #f0f0f0;
     color: black;
