@@ -6,7 +6,7 @@ const reposSection = document.querySelector('.repos');
 const filterInput = document.querySelector('.filter-repos');
 let count =10;
 
-
+const div4Elements = document.querySelectorAll('.div4');
 document.getElementById('usernameForm').addEventListener('submit', async function(event) {
     event.preventDefault();
     const username1 = document.getElementById('username').value;
@@ -14,6 +14,11 @@ document.getElementById('usernameForm').addEventListener('submit', async functio
         console.log('Username:', username1);
         count = 10;
         username = username1;
+        let x=1;
+        div4Elements.forEach((div4)=>{
+            div4.innerHTML= `${x}`;
+            x++;
+        })
         getProfile();
         repoList.innerHTML = '';
         getRepos();
@@ -117,8 +122,6 @@ const displayRepos = (repos) => {
     }
 
 };
-
-const div4Elements = document.querySelectorAll('.div4');
 
 div4Elements.forEach((div4) => {
     div4.addEventListener('click', function() {
