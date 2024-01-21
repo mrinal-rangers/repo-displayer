@@ -137,6 +137,15 @@ div5Elements.addEventListener('click',()=>{
         div4.innerHTML= `${count+10}`;
     });
 })
+const div6Elements = document.querySelector('.div6');
+div6Elements.addEventListener('click',()=>{
+    div4Elements.forEach((div4) => {
+        const value = div4.textContent;
+        count = parseInt(value); 
+        div4.innerHTML= `${(count+90)%100}`;
+    });
+})
+
 
 
 filterInput.addEventListener('input', (e) => {
